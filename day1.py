@@ -8,8 +8,8 @@ import sys
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-    hashtable = [];
-    returncount = 0;
+    hashtable = []; #to check uniqueness of number
+    returncount = 0; # to store the data
     for i in ar:
         if (not i in hashtable):
             hashtable.append(i)
