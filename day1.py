@@ -9,7 +9,7 @@ import sys
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
     hashtable = []; #to check uniqueness of number
-    returncount = 0; # to store the data
+    returncount = 0; # to store and return the data
     for i in ar:
         if (not i in hashtable):
             hashtable.append(i)
