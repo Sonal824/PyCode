@@ -8,21 +8,16 @@ import sys
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-    hashtable = []; #to check uniqueness of number
-    returncount = 0; # to store and return the data
+    lookuplist = [];
+    pairs = 0;
     for i in ar:
-        if (not i in hashtable):
-            hashtable.append(i)
-            totalcount = 0
-            for j in ar:
-                if(i == j):
-                    totalcount = totalcount + 1
-            if(totalcount > 1):
-                returncount += totalcount // 2;
-    return returncount;  
+        if(not i in lookuplist):
+            lookuplist.append(i)
+        else:
+            pairs += 1
+            lookuplist.remove(i)
+    return pairs;  
             
-    
-
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
