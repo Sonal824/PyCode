@@ -20,6 +20,19 @@ def stepPerms(n):
         arr[i] = arr[i-3] + arr[i-2] + arr[i-1];
     return arr[n-1];
 
+
+# Complete the stepPerms function below.
+# cacheRes = dict()
+# cacheRes[1] = 1
+# cacheRes[2] = 2
+# cacheRes[3] = 4
+# def stepPerms(n):
+#     # Recursive Solution
+#     if n==0: return 0;
+#     if n in cacheRes.keys(): return cacheRes[n]
+#     cacheRes[n]= stepPerms(n-3) + stepPerms(n-2) + stepPerms(n-1)
+#     return cacheRes[n]
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
